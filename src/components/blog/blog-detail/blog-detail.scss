@@ -1,0 +1,98 @@
+@use "../../../styles/variables" as v;
+.blog-detail-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  .blog-detail-body {
+    width: 80%;
+    .blog-detail-title {
+      display: flex;
+      justify-content: center;
+      font-size: 1.3em;
+      font-weight: 500;
+      color: v.$color1;
+    }
+    .blog-detail-subtitle-row {
+      padding: 15px;
+
+      .blog-detail-subtitle-col {
+        min-width: 120px;
+
+        .blog-detail-icon-subtitle {
+          font-size: 1.1em;
+          text-align: end;
+          font-size: 25px;
+          display: flex;
+          justify-content: end;
+          gap: 15px;
+          color: v.$color1;
+
+          @media screen and (max-width: 541px) {
+            display: flex;
+            justify-content: center;
+          }
+          svg {
+            cursor: pointer;
+          }
+        }
+        .blog-detail-subtitle {
+          @media screen and (max-width: 550px) {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+          }
+          font-size: 1.1em;
+          text-align: start;
+          color: v.$color1;
+        }
+      }
+    }
+
+    .blog-detail-name-subtitle {
+      font-size: 1.2em;
+      color: v.$color1;
+      padding: 15px;
+      .blog-detail-image {
+        width: 50px;
+        height: 50px;
+      }
+      @media screen and (max-width: 550px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .blog-detail-text {
+      text-align: justify;
+      padding: 15px;
+      font-size: 1.1em;
+      color: v.$color1;
+    }
+
+    .comment-form {
+      width: 50%;
+      min-width: 250px;
+
+      .comment-send-btn {
+        background-color: v.$color6;
+        border: none;
+        margin-top: 5px;
+        &:hover {
+          background-color: v.$color5;
+          color: v.$color1;
+          font-weight: 500;
+        }
+      }
+
+      .pagination-btn {
+        background-color: transparent;
+        color: v.$color1;
+        border: none;
+        margin-bottom: 20px;
+        width: 20px;
+      }
+    }
+  }
+}

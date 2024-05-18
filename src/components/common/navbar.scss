@@ -1,0 +1,109 @@
+@use "../../styles/variables" as v;
+
+.navbar-header {
+  height: 80px;
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+
+  .navbar-container {
+    gap: 80px;
+    width: 100%;
+    background-color: v.$color2;
+    flex-grow: 2;
+    @media screen and (max-width: 991px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0;
+    }
+    @media screen and (max-width: 396px) {
+      gap: 0;
+    }
+    .logo-image {
+      .logo {
+        width: 150px;
+        height: auto;
+      }
+    }
+    .navbar-collapse {
+      gap: 80px;
+
+      @media screen and (min-width: 992px) {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+      }
+      @media screen and (max-width: 992px) {
+        background-color: v.$color7;
+        position: absolute;
+        overflow-x: auto;
+        height: 525px;
+        top: 85px;
+        right: 0;
+        width: 35%;
+        z-index: 1000;
+        padding: 15px;
+        box-shadow: 0 10px 30px -5px v.$color6;
+      }
+
+      .nav-link {
+        color: v.$color1;
+        font-weight: 500;
+        font-size: 1.3em;
+      }
+      .navbar-nav {
+        .nav-dropdown {
+          .dropdown-menu.show {
+            position: absolute;
+            top: 63px;
+            border: none;
+            box-shadow: 0 10px 30px -20px v.$color6;
+            background-color: v.$color7;
+
+            @media screen and (max-width: 992px) {
+              top: 50px;
+            }
+            .dropdown-row {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              background-color: v.$color7;
+              margin-left: 0;
+              margin-right: 0;
+
+              @media screen and (max-width: 992px) {
+                display: flex;
+              }
+              .dropdown-col {
+                justify-content: center;
+                gap: 5px;
+                flex-basis: calc(10% - 10px);
+                margin-bottom: 5px;
+
+                .dropdown-item {
+                  color: v.$color1;
+                  font-size: 1.1em;
+                  font-weight: 400;
+                  &:hover {
+                    background-color: v.$color5;
+                  }
+                }
+                .dropdown-item-title {
+                  color: v.$color1;
+                  font-size: 1.2em;
+                  font-weight: 450;
+                  &:hover {
+                    background-color: v.$color7;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

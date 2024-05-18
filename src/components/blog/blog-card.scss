@@ -1,0 +1,51 @@
+@use "../../styles/variables" as v;
+.blog-card {
+  height: 100% !important;
+  cursor: pointer;
+  .card-title {
+    color: v.$color1;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 1.3em;
+  }
+
+  .card-subtitle {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: justify;
+    color: v.$color6;
+    height: 125px;
+    font-size: 1em;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .subtitle-date {
+      height: 30px;
+      display: flex;
+      justify-content: end;
+    }
+
+    .image {
+      overflow: hidden;
+      img {
+        transition: transform 0.5s;
+        -webkit-transition: transform 0.5s;
+        -moz-transition: transform 0.5s;
+        -ms-transition: transform 0.5s;
+        -o-transition: transform 0.5s;
+
+        &:hover {
+          transform: scale(1.3);
+          -webkit-transform: scale(1.3);
+          -moz-transform: scale(1.3);
+          -ms-transform: scale(1.3);
+          -o-transform: scale(1.3);
+        }
+      }
+    }
+  }
+}

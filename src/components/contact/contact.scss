@@ -1,0 +1,69 @@
+@use "../../styles/variables" as v;
+.contact-container {
+  width: 80%;
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
+  .contact-form-col {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contact-form {
+      background-color: v.$color7;
+      width: 70%;
+      min-width: 300px;
+
+      color: v.$color1;
+      border-radius: 10px;
+
+      box-shadow: 0 4px 8px 0 v.$color6, 0 6px 20px 0 v.$color6;
+      padding: 15px;
+
+      .form-group {
+        margin-bottom: 20px;
+        position: relative;
+
+        .formik-feedback {
+          position: absolute;
+          bottom: -20px;
+        }
+        .form-control {
+          width: 100% !important;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  .contact-paragraf-col {
+    width: 50%;
+    height: auto;
+    text-align: center;
+    margin-top: 50px;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+    .mail-image {
+      width: 200px;
+      height: 200px;
+      @media screen and (max-width: 900px) {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+  .send-button {
+    background-color: v.$color6;
+    color: v.$color7;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &:hover {
+      background-color: v.$color5;
+      color: v.$color1;
+      font-weight: 500;
+    }
+  }
+}

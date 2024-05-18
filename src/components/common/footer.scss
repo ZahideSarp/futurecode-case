@@ -1,0 +1,60 @@
+@use "../../styles/variables" as v;
+footer {
+  color: v.$color1;
+  width: 100%;
+  background-color: v.$color2;
+  .footer-container {
+    width: 100%;
+    .footer-container-row {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .footer-section {
+        text-align: center;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        .footer-column {
+          flex-direction: column;
+          h3 {
+            font-size: 17px;
+            letter-spacing: 2px;
+            color: v.$color1;
+          }
+
+          a.nav-link {
+            font-size: 18px;
+            padding: 8px 0px;
+            color: v.$color1;
+
+            &:hover {
+              color: v.$color6;
+            }
+          }
+        }
+      }
+
+      .button-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+
+        svg {
+          height: 50px;
+          width: 50px;
+        }
+      }
+      .copyright {
+        text-align: center;
+        font-size: 14px;
+        padding-bottom: 5px;
+        margin: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}
